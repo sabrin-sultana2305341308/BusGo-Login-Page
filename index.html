@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusGo - Login & Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="auth-page" id="authPage">
+      <div class="auth-layout">
+        <div class="photo-panel">
+          <img
+            class="hero-photo"
+            src="https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?auto=format&fit=crop&fm=jpg&q=85&w=1600"
+            alt="Modern intercity coach bus"
+          >
+          <div class="photo-overlay"></div>
+          <div class="photo-content">
+            <img class="photo-logo" src="busgo-logo-white.svg" alt="BusGo">
+            <p class="photo-kicker">BUS TRAVEL PLATFORM</p>
+            <h2>Travel simpler with BusGo.</h2>
+            <p>One account for a cleaner, faster way to manage your bus travel.</p>
+          </div>
+        </div>
+
+        <div class="auth-card">
+          <div class="brand-row">
+            <img class="brand-logo-image" src="busgo-logo.svg" alt="BusGo">
+            <div class="brand-tagline">Fast &amp; Easy Bus Travel</div>
+          </div>
+
+          <div class="form-panel" id="loginPanel">
+            <p class="section-label">ACCOUNT ACCESS</p>
+            <h1>Welcome back</h1>
+            <p class="subtitle">Log in to continue with BusGo.</p>
+
+            <form id="loginForm" novalidate>
+              <label for="loginEmail">Email or Phone Number</label>
+              <input id="loginEmail" type="text" placeholder="Enter your email or phone number" autocomplete="username" required>
+
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+
+              <button class="primary-button" type="submit">Log In</button>
+              <p class="form-message" id="loginMessage" aria-live="polite"></p>
+            </form>
+
+            <div class="switch-row">
+              <span>Don't have an account?</span>
+              <button class="link-button" type="button" id="showRegister">Create an account</button>
+            </div>
+          </div>
+
+          <div class="form-panel hidden" id="registerPanel">
+            <p class="section-label">NEW ACCOUNT</p>
+            <h1>Create your account</h1>
+            <p class="subtitle">Register your account to get started with BusGo.</p>
+
+            <form id="registerForm" novalidate>
+              <label for="registerName">Full Name</label>
+              <input id="registerName" type="text" placeholder="Enter your full name" autocomplete="name" required>
+
+              <label for="registerEmail">Email or Phone Number</label>
+              <input id="registerEmail" type="text" placeholder="Enter your email or phone number" autocomplete="username" required>
+
+              <label for="registerPassword">Password</label>
+              <input id="registerPassword" type="password" placeholder="Create a password" autocomplete="new-password" required>
+
+              <label for="registerConfirm">Confirm Password</label>
+              <input id="registerConfirm" type="password" placeholder="Enter your password again" autocomplete="new-password" required>
+
+              <button class="primary-button" type="submit">Create Account</button>
+              <p class="form-message" id="registerMessage" aria-live="polite"></p>
+            </form>
+
+            <div class="switch-row">
+              <span>Already have an account?</span>
+              <button class="link-button" type="button" id="showLogin">Back to login</button>
+            </div>
+          </div>
+
+          <p class="demo-note">BusGo authentication demonstration</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome-page hidden" id="welcomePage">
+      <div class="welcome-card">
+        <div class="welcome-hero">
+          <img
+            src="https://images.unsplash.com/photo-1753201939497-f68d21bd8b57?auto=format&fit=crop&fm=jpg&q=85&w=1600"
+            alt="Passengers travelling on a bus"
+          >
+          <div class="welcome-hero-overlay"></div>
+          <div class="welcome-hero-text">
+            <p class="photo-kicker">BUSGO ACCOUNT</p>
+            <h2 id="welcomeHeading">Thank You for Registering</h2>
+            <p id="welcomeText">Your account has been created and you have successfully logged in.</p>
+          </div>
+        </div>
+
+        <div class="welcome-body">
+          <div class="intro-copy">
+            <p class="section-label">ABOUT BUSGO</p>
+            <h3>A simple digital platform for bus travel.</h3>
+            <p>
+              BusGo is a project concept designed to make bus travel management easier for passengers.
+              Users can create an account, securely sign in, and access the BusGo experience from one place.
+            </p>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-box">
+              <h3>How BusGo Works</h3>
+              <p>
+                First, a passenger creates a BusGo account. After registration, the passenger signs in using the
+                same email or phone number and password. Successful login takes the user into the main BusGo system.
+              </p>
+            </div>
+            <div class="info-box">
+              <h3>Account Instructions</h3>
+              <p>
+                Use accurate account information, choose a password you can remember, and keep your login details
+                private. For this project demonstration, registration and login are the main features.
+              </p>
+            </div>
+          </div>
+
+          <div class="next-section">
+            <div>
+              <p class="next-label">NEXT STEP</p>
+              <h3>Ready to continue?</h3>
+              <p>To continue furthermore and access the BusGo ticketing service, click Next.</p>
+            </div>
+            <button class="next-button" type="button">Next</button>
+          </div>
+
+          <button class="logout-button" type="button" id="logoutButton">Log Out</button>
+          <p class="demo-note">BusGo authentication demonstration</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
